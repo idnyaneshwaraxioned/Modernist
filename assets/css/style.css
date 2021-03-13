@@ -143,12 +143,35 @@ header .wrapper {
   columns: #6b6b6b;
 }
 
-.menu li a {
-  padding: 6px 16px;
+.menu-item { position: relative;}
+
+.menu .menu-item a {
+  padding: 8px 16px;
   font-size: 18px;
+  color: #fff;
+}
+
+.menu .menu-item a:hover{
+  background-color: #7EC48D;
+  border-radius: 10px;
+}
+
+.dropdown {
+  position: absolute;
+  top: 34px;
+  left: 0;
   background-color: #7EC48D;
 }
 
+.dropdown li {
+  width: 100%;
+  border-bottom: 1px solid gray;
+}
+
+.dropdown li a {
+  padding: 8px 16px;
+  font-size: 18px;
+}
 .menu li:last-child {
   display: none;
 }
