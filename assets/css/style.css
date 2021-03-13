@@ -85,7 +85,7 @@ sub { bottom: -.25em; }
 body {
   box-sizing: border-box;
   font-family: serif;
-  background-color: tan;
+  background-color: #2B0305;
 }
 
 a { 
@@ -127,14 +127,14 @@ header::before {
 }
 
 header .wrapper {
+  padding: 36px 0;
   justify-content: space-between;
   align-items: center;
-  padding: 36px 0;
 }
 .logo { width: 18%;}
 
 .logo a {
-  font-size: 35px;
+  font-size: 32px;
   color: #fff;
 }
 
@@ -143,24 +143,32 @@ header .wrapper {
   columns: #6b6b6b;
 }
 
-.menu-item { position: relative;}
+nav { margin-right: 15px;}
+
+.menu-item { position: relative; transition: .6s;}
 
 .menu .menu-item a {
   padding: 8px 16px;
+  border-radius: 10px;
   font-size: 18px;
   color: #fff;
 }
 
-.menu .menu-item a:hover{
+.menu .menu-item a.active,
+.menu .menu-item a:hover {
   background-color: #7EC48D;
-  border-radius: 10px;
 }
 
 .dropdown {
+  display: none;
   position: absolute;
-  top: 34px;
+  top: 38px;
   left: 0;
   background-color: #7EC48D;
+}
+
+.menu-item:hover .dropdown {
+  display: block;
 }
 
 .dropdown li {
@@ -176,7 +184,6 @@ header .wrapper {
   display: none;
 }
 
-
 /*=================================
   Header styling ends here
 =================================*/  
@@ -185,7 +192,60 @@ header .wrapper {
   main styling starts here
 =================================*/
 
+/* Banner start here */
+.slider { position: relative; }
 
+.slide { display: none; }
+.slide.active{ 
+  width: 86%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  }
+
+.slide-content {
+  flex-basis: 43%;
+}
+
+.slide-content h2 {
+  color: #fff;
+  font-size: 57px;
+  font-weight: bold;
+  margin-top: 25%;
+}
+
+.slide-content p {
+  font-size: 16px;
+  margin-top: 6%;
+}
+
+.slide-content a {
+  margin-top: 5%;
+  padding: 10px 16px;
+  border-radius: 10px;
+  font-size: 18px;
+  color: #fff;
+  background-color: #7EC48D;
+}
+.slide-image { flex-basis: 51% }
+.slide-image figure { 
+  width: 86%;
+  border: 25px  solid #6b6b6b;
+  border-radius: 50%;
+    }
+.slide-image figure img { border-radius: 50% }
+
+.next , .prev {
+  position: absolute;
+  top: 50%;
+  font-size: 50px;
+  font-weight: bold;
+  color: #7EC48D;
+}
+.next {
+  right: 0;
+}
+/* Banner ends here */
 
 
 
